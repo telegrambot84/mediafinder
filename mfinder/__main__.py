@@ -1,9 +1,9 @@
-import uvloop
+# import uvloop
 from pyrogram import Client, idle, __version__
 from pyrogram.raw.all import layer
 from mfinder import APP_ID, API_HASH, BOT_TOKEN
 
-uvloop.install()
+# uvloop.install()
 
 
 async def main():
