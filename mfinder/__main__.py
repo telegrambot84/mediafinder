@@ -11,7 +11,7 @@ from config import APP_ID, API_HASH, BOT_TOKEN
 
 
 async def main():
-    plugins = dict(root="mfinder/plugins")
+    plugins = dict(root="plugins")
     app = Client(
         name="mfinder",
         api_id=APP_ID,
