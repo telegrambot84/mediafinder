@@ -27,4 +27,14 @@ async def main():
         await idle()
         print(f"{me.first_name} - @{me.username} - Stopped !!!")
 
-uvloop.run(main())
+import asyncio
+asyncio.run(main())
+
+try:
+    import uvloop
+    uvloop.install()
+except ImportError:
+    pass
+
+import asyncio
+asyncio.run(main())
