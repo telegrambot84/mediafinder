@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 # import uvloop
 from pyrogram import Client, idle, __version__
 from pyrogram.raw.all import layer
