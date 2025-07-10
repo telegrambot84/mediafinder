@@ -37,6 +37,12 @@ HELP_KB = const.HELP_KB
 
 
 # logging Conf
-logging.config.fileConfig(fname="config.ini", disable_existing_loggers=False)
+import os
+import logging.config
+
+config_path = os.path.join(os.path.dirname(__file__), "..", "config.ini")
+config_path = os.path.abspath(config_path)
+
+logging.config.fileConfig(fname=config_path, disable_existing_loggers=False)
 LOGGER = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
